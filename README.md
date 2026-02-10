@@ -28,7 +28,7 @@ The data are provided for examination purposes only and should not be redistribu
 Data analysis is conducted via command-line control of cli.py.
 To run on the example datasets, try:
 ```
-python cli.py example-data_1 --showplots --model eyring
+python cli.py linear_example-data_1 --showplots --model eyring
 ```
 For information on additional commands, try:
 ```
