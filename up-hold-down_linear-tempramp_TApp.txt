@@ -1,0 +1,59 @@
+Controller Script
+Interval = .6	Set the time interval between commands to 0.6 seconds (0.01 min).
+
+------------------
+Initial Setup
+------------------
+[F1 LO +]	Lock the front panel controls (stop other users manually changing settings).
+
+[F1 TC +]	Turn Temperature Control on.
+[F1 PP +]	Turn on pump (should stay on even if temperature control is off)
+[F1 TT S 20]	Set the Target Temperature to 20 degC.
+[F1 SS S 1200]	Set Stirrer Speed to 1200 rpm (turns stirrer on).
+
+[F1 CT +3]	Report Cuvette holder Temperature periodically (every 3 seconds).
+[F1 PT +3]	Report Probe Temperature perodically (every 3 seconds).
+[F1 HT +3]	Report Heat exchanger Temperature periodically (every 3 seconds).
+
+[*CTD]		Clear time/temperature displays and set time to zero.
+
+[*MSG + Sample requires irradiation then equilibration to 20 degC. Click OK, then irradiate your sample, place into holder, wait until probe temperature equilibration. Click on "End Wait" at exact same time as UV-Vis measurement starts.]
+[*D=1500]	Wait 15 minutes or until user clicks the "End Wait button".
+
+[*CTD]		Clear time/temperature displays and set time to zero.
+
+------------------
+Ramp to 100 C at 0.25 degC/min
+------------------
+[F1 RR S 0.25]	Set Ramping Rate to 0.25 degC/min
+[F1 TT S 100]	Set the Target Temperature to 100 degC to start the ramping process.
+
+[*WCT>=100]	Wait until the Cuvette holder Temperature reaches 100 degC.
+
+[*D 3000]	Wait 30 min to allow temperature to stabilise and sample to fully isomerise.
+
+------------------
+Ramp to 20 C at 1.0 degC/min
+------------------
+[F1 RR S 1.0]	Set Ramping Rate to 1.0 degC/min.
+[F1 TT S 20]	Set Target Temperature to 20 degC to start the ramping process.
+[F1 TC +]	Turn on Temperature Control to ensure pump runs (turns off automatically at high temperature).
+
+[*WCT<=20]	Wait until the Cuvette holder Temperature reaches 20 degC.
+
+[*D 1000]	Wait 10 min to allow temperature to stabilise.
+
+------------------
+Clean up
+------------------
+[F1 PT -]	Stop periodic Probe Temperature reporting.
+[F1 CT -]	Stop periodic Cuvette holder Temperature reporting.
+[F1 HT -]	Stop periodic Heat exchanger Temperature reporting.
+
+[F1 TC -]	Turn Temperature Control off.
+[F1 PP -]	Turn off pump.
+[F1 SS -]	Stirring off.
+
+[F1 LO -]	Unlock the front panel controls.
+
+[*MSG + The linear temperature ramping script is complete. Remember to save your temperature data before closing software!]	Notify user with beeping.

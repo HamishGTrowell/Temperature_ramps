@@ -1,0 +1,86 @@
+Controller Script
+Interval = .6	Set the time interval between commands to 0.6 seconds (0.01 min).
+
+------------------
+Initial Setup
+------------------
+[F1 LO +]	Lock the front panel controls (stop other users manually changing settings).
+
+[F1 TC +]	Turn Temperature Control on.
+[F1 TT S 20]	Set the Target Temperature to 20 degC.
+[F1 SS S 1200]	Set Stirrer Speed to 1200 rpm (turns stirrer on).
+
+[F1 CT +3]	Report Cuvette holder Temperature periodically (every 3 seconds).
+[F1 PT +3]	Report Probe Temperature perodically (every 3 seconds).
+[F1 HT +3]	Report Heat exchanger Temperature periodically (every 3 seconds).
+
+[*D 1000]	Wait 10 min to allow temperature to stabilise.
+
+[*CTD]		Clear time/temperature displays and set time to zero.
+
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+------------------
+Change temp to by 10 C for 30 min
+------------------
+[F1 TT S 30]	Set the Target Temperature to 30 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 40]	Set the Target Temperature to 40 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 50]	Set the Target Temperature to 50 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 60]	Set the Target Temperature to 60 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 70]	Set the Target Temperature to 70 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 80]	Set the Target Temperature to 80 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 90]	Set the Target Temperature to 90 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 100]	Set the Target Temperature to 100 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 90]	Set the Target Temperature to 90 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 80]	Set the Target Temperature to 80 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 70]	Set the Target Temperature to 70 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 60]	Set the Target Temperature to 60 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 50]	Set the Target Temperature to 50 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 40]	Set the Target Temperature to 40 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 30]	Set the Target Temperature to 30 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 TT S 20]	Set the Target Temperature to 20 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+------------------
+Clean up
+------------------
+[F1 PT -]	Stop periodic Probe Temperature reporting.
+[F1 CT -]	Stop periodic Cuvette holder Temperature reporting.
+[F1 HT -]	Stop periodic Heat exchanger Temperature reporting.
+
+[F1 TC -]	Turn Temperature Control off.
+[F1 SS -]	Stirring off.
+
+[F1 LO -]	Unlock the front panel controls.
+
+[*MSG + The linear temperature calibration script is complete. Remember to save your temperature data before closing software!]	Notify user with beeping.

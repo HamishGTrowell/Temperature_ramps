@@ -1,0 +1,1335 @@
+Controller Script
+Interval = .6	Set the time interval between commands to 0.6 seconds (0.01 min).
+
+------------------
+Initial Setup
+------------------
+[F1 LO +]	Lock the front panel controls (stop other users manually changing settings).
+
+[F1 TC +]	Turn Temperature Control on.
+[F1 PP +]	Turn on pump (should stay on even if temperature control is off)
+[F1 TT S 58.36]	Set the Target Temperature to T_0.
+[F1 SS S 1200]	Set Stirrer Speed to 1200 rpm (turns stirrer on).
+
+[F1 CT +3]	Report Cuvette holder Temperature periodically (every 3 seconds).
+[F1 PT +3]	Report Probe Temperature perodically (every 3 seconds).
+[F1 HT +3]	Report Heat exchanger Temperature periodically (every 3 seconds).
+
+[*CTD]		Clear time/temperature displays and set time to zero.
+
+[*MSG + Sample requires irradiation. Warm sample to pre-equilibrate. Click OK, then irradiate your sample, place into holder. Click on "End Wait" at exact same time as UV-Vis measurement starts.]
+[*D=1500]	Wait 15 minutes or until user clicks the "End Wait button".
+
+[*CTD]		Clear time/temperature displays and set time to zero.
+
+------------------
+Ramp to 100 C following nonlinear temperature ramp
+------------------
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.39]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.42]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.45]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.48]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.51]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.54]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.56]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.59]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.62]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.65]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.68]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.71]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.74]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.77]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.8]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.83]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.86]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.89]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.92]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.95]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 58.98]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.01]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.04]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.07]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.1]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.13]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.16]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.19]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.22]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.26]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.29]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.32]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.35]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.38]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.41]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.45]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.48]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.51]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.54]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.57]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.61]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.64]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.67]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.7]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.74]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.77]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.8]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.84]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.87]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.9]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.94]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 59.97]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 60.01]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 60.04]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 60.07]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 60.11]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 60.14]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 60.18]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 60.21]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.03]	Set Ramping Rate in degC/min.
+[F1 TT S 60.25]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.28]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.32]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.35]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.39]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.42]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.46]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.5]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.53]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.57]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.6]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.64]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.68]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.71]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.75]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.79]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.83]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.86]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.9]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.94]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 60.98]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.01]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.05]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.09]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.13]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.17]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.21]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.25]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.29]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.33]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.37]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.41]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.45]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.49]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.53]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.57]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.61]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.65]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.69]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.73]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.77]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.81]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.86]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.9]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.94]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 61.98]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 62.02]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 62.07]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 62.11]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 62.15]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 62.2]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 62.24]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 62.29]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 62.33]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 62.37]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 62.42]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.04]	Set Ramping Rate in degC/min.
+[F1 TT S 62.46]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 62.51]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 62.55]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 62.6]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 62.64]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 62.69]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 62.74]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 62.78]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 62.83]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 62.88]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 62.92]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 62.97]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.02]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.07]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.12]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.16]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.21]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.26]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.31]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.36]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.41]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.46]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.51]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.56]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.61]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.66]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.71]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.77]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.82]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.87]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.92]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 63.98]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 64.03]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 64.08]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 64.14]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 64.19]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 64.25]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.05]	Set Ramping Rate in degC/min.
+[F1 TT S 64.3]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 64.36]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 64.41]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 64.47]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 64.53]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 64.58]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 64.64]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 64.7]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 64.75]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 64.81]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 64.87]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 64.93]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 64.99]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.05]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.11]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.17]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.23]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.29]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.35]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.42]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.48]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.54]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.6]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.67]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.73]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.06]	Set Ramping Rate in degC/min.
+[F1 TT S 65.8]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 65.86]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 65.93]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 65.99]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.06]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.13]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.2]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.26]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.33]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.4]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.47]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.54]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.61]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.69]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.76]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.83]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.9]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 66.98]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 67.05]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.07]	Set Ramping Rate in degC/min.
+[F1 TT S 67.13]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 67.2]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 67.28]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 67.35]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 67.43]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 67.51]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 67.59]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 67.67]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 67.75]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 67.83]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 67.91]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 67.99]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 68.08]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 68.16]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.08]	Set Ramping Rate in degC/min.
+[F1 TT S 68.24]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.09]	Set Ramping Rate in degC/min.
+[F1 TT S 68.33]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.09]	Set Ramping Rate in degC/min.
+[F1 TT S 68.42]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.09]	Set Ramping Rate in degC/min.
+[F1 TT S 68.5]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.09]	Set Ramping Rate in degC/min.
+[F1 TT S 68.59]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.09]	Set Ramping Rate in degC/min.
+[F1 TT S 68.68]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.09]	Set Ramping Rate in degC/min.
+[F1 TT S 68.77]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.09]	Set Ramping Rate in degC/min.
+[F1 TT S 68.86]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.09]	Set Ramping Rate in degC/min.
+[F1 TT S 68.95]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.09]	Set Ramping Rate in degC/min.
+[F1 TT S 69.04]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.09]	Set Ramping Rate in degC/min.
+[F1 TT S 69.14]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.09]	Set Ramping Rate in degC/min.
+[F1 TT S 69.23]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.09]	Set Ramping Rate in degC/min.
+[F1 TT S 69.32]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.1]	Set Ramping Rate in degC/min.
+[F1 TT S 69.42]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.1]	Set Ramping Rate in degC/min.
+[F1 TT S 69.52]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.1]	Set Ramping Rate in degC/min.
+[F1 TT S 69.62]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.1]	Set Ramping Rate in degC/min.
+[F1 TT S 69.71]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.1]	Set Ramping Rate in degC/min.
+[F1 TT S 69.81]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.1]	Set Ramping Rate in degC/min.
+[F1 TT S 69.92]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.1]	Set Ramping Rate in degC/min.
+[F1 TT S 70.02]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.1]	Set Ramping Rate in degC/min.
+[F1 TT S 70.12]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.1]	Set Ramping Rate in degC/min.
+[F1 TT S 70.23]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.11]	Set Ramping Rate in degC/min.
+[F1 TT S 70.33]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.11]	Set Ramping Rate in degC/min.
+[F1 TT S 70.44]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.11]	Set Ramping Rate in degC/min.
+[F1 TT S 70.55]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.11]	Set Ramping Rate in degC/min.
+[F1 TT S 70.66]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.11]	Set Ramping Rate in degC/min.
+[F1 TT S 70.77]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.11]	Set Ramping Rate in degC/min.
+[F1 TT S 70.88]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.11]	Set Ramping Rate in degC/min.
+[F1 TT S 70.99]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.11]	Set Ramping Rate in degC/min.
+[F1 TT S 71.11]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.12]	Set Ramping Rate in degC/min.
+[F1 TT S 71.22]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.12]	Set Ramping Rate in degC/min.
+[F1 TT S 71.34]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.12]	Set Ramping Rate in degC/min.
+[F1 TT S 71.46]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.12]	Set Ramping Rate in degC/min.
+[F1 TT S 71.58]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.12]	Set Ramping Rate in degC/min.
+[F1 TT S 71.7]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.12]	Set Ramping Rate in degC/min.
+[F1 TT S 71.83]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.13]	Set Ramping Rate in degC/min.
+[F1 TT S 71.95]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.13]	Set Ramping Rate in degC/min.
+[F1 TT S 72.08]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.13]	Set Ramping Rate in degC/min.
+[F1 TT S 72.21]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.13]	Set Ramping Rate in degC/min.
+[F1 TT S 72.34]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.13]	Set Ramping Rate in degC/min.
+[F1 TT S 72.47]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.13]	Set Ramping Rate in degC/min.
+[F1 TT S 72.61]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.14]	Set Ramping Rate in degC/min.
+[F1 TT S 72.74]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.14]	Set Ramping Rate in degC/min.
+[F1 TT S 72.88]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.14]	Set Ramping Rate in degC/min.
+[F1 TT S 73.02]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.14]	Set Ramping Rate in degC/min.
+[F1 TT S 73.17]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.14]	Set Ramping Rate in degC/min.
+[F1 TT S 73.31]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.15]	Set Ramping Rate in degC/min.
+[F1 TT S 73.46]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.15]	Set Ramping Rate in degC/min.
+[F1 TT S 73.61]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.15]	Set Ramping Rate in degC/min.
+[F1 TT S 73.76]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.15]	Set Ramping Rate in degC/min.
+[F1 TT S 73.91]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.16]	Set Ramping Rate in degC/min.
+[F1 TT S 74.07]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.16]	Set Ramping Rate in degC/min.
+[F1 TT S 74.23]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.16]	Set Ramping Rate in degC/min.
+[F1 TT S 74.39]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.16]	Set Ramping Rate in degC/min.
+[F1 TT S 74.56]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.17]	Set Ramping Rate in degC/min.
+[F1 TT S 74.72]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.17]	Set Ramping Rate in degC/min.
+[F1 TT S 74.89]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.17]	Set Ramping Rate in degC/min.
+[F1 TT S 75.07]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.18]	Set Ramping Rate in degC/min.
+[F1 TT S 75.25]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.18]	Set Ramping Rate in degC/min.
+[F1 TT S 75.43]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.18]	Set Ramping Rate in degC/min.
+[F1 TT S 75.61]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.19]	Set Ramping Rate in degC/min.
+[F1 TT S 75.8]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.19]	Set Ramping Rate in degC/min.
+[F1 TT S 75.99]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.2]	Set Ramping Rate in degC/min.
+[F1 TT S 76.18]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.2]	Set Ramping Rate in degC/min.
+[F1 TT S 76.38]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.2]	Set Ramping Rate in degC/min.
+[F1 TT S 76.59]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.21]	Set Ramping Rate in degC/min.
+[F1 TT S 76.79]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.21]	Set Ramping Rate in degC/min.
+[F1 TT S 77.01]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.22]	Set Ramping Rate in degC/min.
+[F1 TT S 77.22]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.22]	Set Ramping Rate in degC/min.
+[F1 TT S 77.44]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.23]	Set Ramping Rate in degC/min.
+[F1 TT S 77.67]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.23]	Set Ramping Rate in degC/min.
+[F1 TT S 77.9]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.24]	Set Ramping Rate in degC/min.
+[F1 TT S 78.14]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.24]	Set Ramping Rate in degC/min.
+[F1 TT S 78.39]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.25]	Set Ramping Rate in degC/min.
+[F1 TT S 78.64]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.26]	Set Ramping Rate in degC/min.
+[F1 TT S 78.89]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.26]	Set Ramping Rate in degC/min.
+[F1 TT S 79.16]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.27]	Set Ramping Rate in degC/min.
+[F1 TT S 79.43]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.28]	Set Ramping Rate in degC/min.
+[F1 TT S 79.71]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.29]	Set Ramping Rate in degC/min.
+[F1 TT S 79.99]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.3]	Set Ramping Rate in degC/min.
+[F1 TT S 80.29]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.3]	Set Ramping Rate in degC/min.
+[F1 TT S 80.6]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.31]	Set Ramping Rate in degC/min.
+[F1 TT S 80.91]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.32]	Set Ramping Rate in degC/min.
+[F1 TT S 81.23]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.34]	Set Ramping Rate in degC/min.
+[F1 TT S 81.57]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.35]	Set Ramping Rate in degC/min.
+[F1 TT S 81.92]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.36]	Set Ramping Rate in degC/min.
+[F1 TT S 82.28]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.37]	Set Ramping Rate in degC/min.
+[F1 TT S 82.65]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.39]	Set Ramping Rate in degC/min.
+[F1 TT S 83.04]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.4]	Set Ramping Rate in degC/min.
+[F1 TT S 83.44]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.42]	Set Ramping Rate in degC/min.
+[F1 TT S 83.86]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.44]	Set Ramping Rate in degC/min.
+[F1 TT S 84.3]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.46]	Set Ramping Rate in degC/min.
+[F1 TT S 84.76]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.48]	Set Ramping Rate in degC/min.
+[F1 TT S 85.24]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.5]	Set Ramping Rate in degC/min.
+[F1 TT S 85.75]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.53]	Set Ramping Rate in degC/min.
+[F1 TT S 86.28]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.56]	Set Ramping Rate in degC/min.
+[F1 TT S 86.84]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.59]	Set Ramping Rate in degC/min.
+[F1 TT S 87.43]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.63]	Set Ramping Rate in degC/min.
+[F1 TT S 88.06]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.67]	Set Ramping Rate in degC/min.
+[F1 TT S 88.73]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.72]	Set Ramping Rate in degC/min.
+[F1 TT S 89.44]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.77]	Set Ramping Rate in degC/min.
+[F1 TT S 90.21]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.83]	Set Ramping Rate in degC/min.
+[F1 TT S 91.04]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.9]	Set Ramping Rate in degC/min.
+[F1 TT S 91.95]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 0.99]	Set Ramping Rate in degC/min.
+[F1 TT S 92.93]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 1.09]	Set Ramping Rate in degC/min.
+[F1 TT S 94.02]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 1.21]	Set Ramping Rate in degC/min.
+[F1 TT S 95.23]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 1.37]	Set Ramping Rate in degC/min.
+[F1 TT S 96.6]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 1.57]	Set Ramping Rate in degC/min.
+[F1 TT S 98.17]	Set the Target Temperature to start the ramping process.
+[*D=100] Wait 1 minute.
+
+[F1 RR S 1.83]	Set Ramping Rate in degC/min.
+[F1 TT S 100.0]	Set the Target Temperature to start the ramping process.
+
+
+
+[*D 3000]	Wait 30 min to allow temperature to stabilise and sample to fully isomerise.
+
+------------------
+Ramp to 20 C at 1.0 degC/min
+------------------
+[F1 RR S 1.0]	Set Ramping Rate to 1.0 degC/min.
+[F1 TT S 20]	Set Target Temperature to 20 degC to start the ramping process.
+[F1 TC +]	Turn on Temperature Control to ensure pump runs (turns off automatically at high temperature).
+
+[*WCT<=20]	Wait until the Cuvette holder Temperature reaches 20 degC.
+
+[*D 1000]	Wait 10 min to allow temperature to stabilise.
+
+------------------
+Clean up
+------------------
+[F1 PT -]	Stop periodic Probe Temperature reporting.
+[F1 CT -]	Stop periodic Cuvette holder Temperature reporting.
+[F1 HT -]	Stop periodic Heat exchanger Temperature reporting.
+
+[F1 TC -]	Turn Temperature Control off.
+[F1 PP -]	Turn off pump.
+[F1 SS -]	Stirring off.
+
+[F1 LO -]	Unlock the front panel controls.
+
+[*MSG + The linear temperature ramping script is complete. Remember to save your temperature data before closing software!]	Notify user with beeping.

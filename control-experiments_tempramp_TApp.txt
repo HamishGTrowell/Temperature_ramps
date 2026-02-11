@@ -1,0 +1,251 @@
+Controller Script
+Interval = .6	Set the time interval between commands to 0.6 seconds (0.01 min).
+
+------------------
+Initial Setup
+------------------
+[F1 LO +]	Lock the front panel controls (stop other users manually changing settings).
+
+[F1 TC +]	Turn Temperature Control on.
+
+[F1 PP +]	Turn on pump (should stay on even if temperature control is off)
+
+[F1 SS S 1200]	Set Stirrer Speed to 1200 rpm (turns stirrer on).
+
+[F1 CT +3]	Report Cuvette holder Temperature periodically (every 3 seconds).
+[F1 PT +3]	Report Probe Temperature perodically (every 3 seconds).
+[F1 HT +3]	Report Heat exchanger Temperature periodically (every 3 seconds).
+
+[*CTD]		Clear time/temperature displays and set time to zero.
+
+[*MSG + Click OK then click on "End Wait" at exact same time as UV-Vis measurement starts.]
+[*D=1500]	Wait 15 minutes or until user clicks the "End Wait button".
+
+[*CTD]		Clear time/temperature displays and set time to zero.
+
+[F1 TT S 100]	Set the Target Temperature to 100 degC to thermally isomerise.
+[*WCT>=100]	Wait until the Cuvette holder Temperature reaches 100 degC.
+[*D 6000]	Wait 60 min to allow complete isomerisation.
+
+[F1 RR S 0.5]	Set Ramping Rate to 0.5 degC/min
+[F1 TT S 20]	Set the Target Temperature to 20 degC to start the ramping process.
+[F1 TC +]	Turn on Temperature Control to ensure pump runs (turns off automatically at high temperature).
+[*WCT<=20]	Wait until the Cuvette holder Temperature reaches 20 degC.
+[*D 2000]	Wait 20 min to allow temperature to stabilise.
+
+------------------
+E-azobenzene UV-Vis
+------------------
+[F1 RR S 0.5]	Set Ramping Rate to 0.5 degC/min
+[F1 TT S 100]	Set the Target Temperature to 100 degC to start the ramping process.
+[*WCT>=100]	Wait until the Cuvette holder Temperature reaches 100 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 RR S 0.5]	Set Ramping Rate to 0.5 degC/min.
+[F1 TT S 20]	Set Target Temperature to 20 degC to start the ramping process.
+[F1 TC +]	Turn on Temperature Control to ensure pump runs (turns off automatically at high temperature).
+[*WCT<=20]	Wait until the Cuvette holder Temperature reaches 20 degC.
+[*D 2000]	Wait 20 min to allow temperature to stabilise.
+
+------------------
+Probe temp vs sample holder temp under isocratic temp
+------------------
+[F1 RR -]	Turn off temperature ramping
+
+[F1 TT S 25]	Set the Target Temperature to 25 degC.
+[*WCT>=25]	Wait until the Cuvette holder Temperature reaches 25 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 30]	Set the Target Temperature to 30 degC.
+[*WCT>=30]	Wait until the Cuvette holder Temperature reaches 30 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 35]	Set the Target Temperature to 35 degC.
+[*WCT>=35]	Wait until the Cuvette holder Temperature reaches 35 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 40]	Set the Target Temperature to 40 degC.
+[*WCT>=40]	Wait until the Cuvette holder Temperature reaches 40 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 45]	Set the Target Temperature to 45 degC.
+[*WCT>=45]	Wait until the Cuvette holder Temperature reaches 45 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 50]	Set the Target Temperature to 50 degC.
+[*WCT>=50]	Wait until the Cuvette holder Temperature reaches 50 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 55]	Set the Target Temperature to 55 degC.
+[*WCT>=55]	Wait until the Cuvette holder Temperature reaches 55 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 60]	Set the Target Temperature to 60 degC.
+[*WCT>=60]	Wait until the Cuvette holder Temperature reaches 60 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 65]	Set the Target Temperature to 65 degC.
+[*WCT>=65]	Wait until the Cuvette holder Temperature reaches 65 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 70]	Set the Target Temperature to 70 degC.
+[*WCT>=70]	Wait until the Cuvette holder Temperature reaches 70 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 75]	Set the Target Temperature to 75 degC.
+[*WCT>=75]	Wait until the Cuvette holder Temperature reaches 75 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 80]	Set the Target Temperature to 80 degC.
+[*WCT>=80]	Wait until the Cuvette holder Temperature reaches 80 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 85]	Set the Target Temperature to 85 degC.
+[*WCT>=85]	Wait until the Cuvette holder Temperature reaches 85 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 90]	Set the Target Temperature to 90 degC.
+[*WCT>=90]	Wait until the Cuvette holder Temperature reaches 90 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 95]	Set the Target Temperature to 95 degC.
+[*WCT>=95]	Wait until the Cuvette holder Temperature reaches 95 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 100]	Set the Target Temperature to 100 degC.
+[*WCT>=100]	Wait until the Cuvette holder Temperature reaches 100 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 95]	Set the Target Temperature to 95 degC.
+[*WCT<=95]	Wait until the Cuvette holder Temperature reaches 95 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 90]	Set the Target Temperature to 90 degC.
+[*WCT<=90]	Wait until the Cuvette holder Temperature reaches 90 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 85]	Set the Target Temperature to 85 degC.
+[*WCT<=85]	Wait until the Cuvette holder Temperature reaches 85 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 80]	Set the Target Temperature to 80 degC.
+[*WCT<=80]	Wait until the Cuvette holder Temperature reaches 800 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 75]	Set the Target Temperature to 75 degC.
+[*WCT<=75]	Wait until the Cuvette holder Temperature reaches 75 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 70]	Set the Target Temperature to 70 degC.
+[*WCT<=70]	Wait until the Cuvette holder Temperature reaches 70 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 65]	Set the Target Temperature to 65 degC.
+[*WCT<=65]	Wait until the Cuvette holder Temperature reaches 65 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 60]	Set the Target Temperature to 60 degC.
+[*WCT<=60]	Wait until the Cuvette holder Temperature reaches 60 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 55]	Set the Target Temperature to 55 degC.
+[*WCT<=55]	Wait until the Cuvette holder Temperature reaches 55 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 50]	Set the Target Temperature to 50 degC.
+[*WCT<=50]	Wait until the Cuvette holder Temperature reaches 50 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 45]	Set the Target Temperature to 45 degC.
+[*WCT<=45]	Wait until the Cuvette holder Temperature reaches 45 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 40]	Set the Target Temperature to 40 degC.
+[*WCT<=40]	Wait until the Cuvette holder Temperature reaches 40 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 35]	Set the Target Temperature to 35 degC.
+[*WCT<=35]	Wait until the Cuvette holder Temperature reaches 35 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 30]	Set the Target Temperature to 30 degC.
+[*WCT<=30]	Wait until the Cuvette holder Temperature reaches 30 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 25]	Set the Target Temperature to 25 degC.
+[*WCT<=25]	Wait until the Cuvette holder Temperature reaches 25 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 TT S 20]	Set the Target Temperature to 20 degC.
+[*WCT<=20]	Wait until the Cuvette holder Temperature reaches 20 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+------------------
+Probe temp vs sample holder temp under linear temp ramp
+------------------
+[F1 RR +]	Turn on temperature ramping
+
+[F1 RR S 0.1]	Set Ramping Rate to 0.1 degC/min
+[F1 TT S 100]	Set the Target Temperature to 100 degC to start the ramping process.
+[*WCT>=100]	Wait until the Cuvette holder Temperature reaches 100 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+[F1 RR S 0.1]	Set Ramping Rate to 0.1 degC/min
+[F1 TT S 20]	Set Target Temperature to 20 degC to start the ramping process.
+[F1 TC +]	Turn on Temperature Control to ensure pump runs (turns off automatically at high temperature).
+[*WCT<=20]	Wait until the Cuvette holder Temperature reaches 20 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+
+[F1 RR S 0.5]	Set Ramping Rate to 0.5 degC/min
+[F1 TT S 100]	Set the Target Temperature to 100 degC to start the ramping process.
+[*WCT>=100]	Wait until the Cuvette holder Temperature reaches 100 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+[F1 RR S 0.5]	Set Ramping Rate to 0.5 degC/min
+[F1 TT S 20]	Set Target Temperature to 20 degC to start the ramping process.
+[F1 TC +]	Turn on Temperature Control to ensure pump runs (turns off automatically at high temperature).
+[*WCT<=20]	Wait until the Cuvette holder Temperature reaches 20 degC.
+[*D 2000]	Wait 20 min to allow temperature to stabilise.
+
+[F1 RR S 1]	Set Ramping Rate to 1 degC/min
+[F1 TT S 100]	Set the Target Temperature to 100 degC to start the ramping process.
+[*WCT>=100]	Wait until the Cuvette holder Temperature reaches 100 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+[F1 RR S 1]	Set Ramping Rate to 1 degC/min
+[F1 TT S 20]	Set Target Temperature to 20 degC to start the ramping process.
+[F1 TC +]	Turn on Temperature Control to ensure pump runs (turns off automatically at high temperature).
+[*WCT<=20]	Wait until the Cuvette holder Temperature reaches 20 degC.
+[*D 2500]	Wait 25 min to allow temperature to stabilise.
+
+[F1 RR S 5]	Set Ramping Rate to 5 degC/min
+[F1 TT S 100]	Set the Target Temperature to 100 degC to start the ramping process.
+[*WCT>=100]	Wait until the Cuvette holder Temperature reaches 100 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+[F1 RR S 5]	Set Ramping Rate to 5 degC/min
+[F1 TT S 20]	Set Target Temperature to 20 degC to start the ramping process.
+[F1 TC +]	Turn on Temperature Control to ensure pump runs (turns off automatically at high temperature).
+[*WCT<=20]	Wait until the Cuvette holder Temperature reaches 20 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+[F1 RR S 10]	Set Ramping Rate to 10 degC/min
+[F1 TT S 100]	Set the Target Temperature to 100 degC to start the ramping process.
+[*WCT>=100]	Wait until the Cuvette holder Temperature reaches 100 degC.
+[*D 1500]	Wait 15 min to allow temperature to stabilise.
+[F1 RR S 10]	Set Ramping Rate to 10 degC/min
+[F1 TT S 20]	Set Target Temperature to 20 degC to start the ramping process.
+[F1 TC +]	Turn on Temperature Control to ensure pump runs (turns off automatically at high temperature).
+[*WCT<=20]	Wait until the Cuvette holder Temperature reaches 20 degC.
+[*D 3000]	Wait 30 min to allow temperature to stabilise.
+
+------------------
+Clean up
+------------------
+[F1 PT -]	Stop periodic Probe Temperature reporting.
+[F1 CT -]	Stop periodic Cuvette holder Temperature reporting.
+[F1 HT -]	Stop periodic Heat exchanger Temperature reporting.
+
+[F1 TC -]	Turn Temperature Control off.
+[F1 PP -]	Turn off pump
+[F1 SS -]	Stirring off.
+
+[F1 LO -]	Unlock the front panel controls.
+
+[*MSG + The linear temperature calibration script is complete. Remember to save your temperature data before closing software!]	Notify user with beeping.
