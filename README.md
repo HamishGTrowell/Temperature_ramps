@@ -23,6 +23,10 @@ The script was developed using:
 The dataset provided corresponds to the data used in Chapter III of the thesis.
 The data are provided for examination purposes only and should not be redistributed without permission.
 
+## TApp Scripts
+
+Scripts to control the sample temperature are provided as TApp scripts (compatible with Quantum Northwest t2sport).
+
 ## Usage
 
 Data analysis is conducted via command-line control of cli.py.
