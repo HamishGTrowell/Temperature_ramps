@@ -23,9 +23,10 @@ The script was developed using:
 The dataset provided corresponds to the data used in Chapter III of the thesis.
 The data are provided for examination purposes only and should not be redistributed without permission.
 
-## TApp Scripts
+## Temperature control scripts
 
 Scripts to control the sample temperature are provided as TApp scripts (compatible with Quantum Northwest t2sport).
+A PID-control script to dynamically adjust the nonlinear temperature ramp based on real-time UV-Vis absorbance data (compatible with Agilent Cary 60 Spectrophotometer) is provided as a Python script. The PID control is not yet tuned correctly.
 
 ## Usage
 
